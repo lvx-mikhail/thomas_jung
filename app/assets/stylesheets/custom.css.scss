@@ -10,6 +10,7 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display|Libre+Baskerville);
 @import url(http://fonts.googleapis.com/css?family=Lobster|Dancing+Script|Bangers|Orbitron|Audiowide);
 @import url(//fonts.googleapis.com/css?family=Montserrat|Open+Sans);
+
 /** body **/
 
 body {
@@ -42,15 +43,24 @@ body {
 
 .nav-pills > li > a {
   border-radius:2px;
-  background-color: #093954;
+  background-color: transparent;
   font-family: 'Orbitron', sans-serif;
+  border-top: 1px solid #a6a6a6;
   font-size: 22px;
 }
 
 .nav-pills > li > a:hover {
   border-radius: 0px;
   background-color: transparent;
-  border: 1px outset #093954;
+  border: 1px outset white;
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+#nav-icon {
+  color: white;
+  padding-right: 10px;
+  padding-top: 20px;
 }
 
 /** baner **/
@@ -175,4 +185,48 @@ hr.style-eight:after {
 /** row styling - fixing weird white space **/
 .row {
   margin: 0px;
+}
+
+
+/** video **/
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
 }

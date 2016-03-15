@@ -9,36 +9,34 @@
 <body>
 <body data-spy="scroll" data-target="#navscroller">
 
-<nav class="navbar navbar-inverse navbar-fixed-top" id="navtainer" role="navigation" style="width:300px; height:900px;">
+<nav class="navbar navbar-fixed-top" id="navtainer" role="navigation" style="width:300px; height:900px; background-color:black;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-    </br>
-      <a class="navbar-brand">Thomas Jung</a>
-    </div>
-   </br>
-   </br>
-    </br>
-     </br>   
+    </div>   
       <ul class="nav nav-pills nav-stacked">
-
+        <div style="text-align:center; border-radius:2px; padding-top:20px;padding-bottom:20px"><%= image_tag("avatar_thumb.jpg") %></div>
+      </br>
         <li>
-          <%= link_to 'Home', '#home', style: 'color:white;' %>
+          <i class="fa fa-user pull-right" style="color:white;" id="nav-icon"></i>
+          <%= link_to "Home", "#home", style:"color:white;" %>
+            
         </li>
         <li>
+          <i class="fa fa-pencil pull-right" style="color:white;" id="nav-icon"></i>
           <%= link_to 'About', '#about', style: 'color:white;' %>
         </li>
         <li>
-          <%= link_to 'Accomplishments', '#accomplishments', style: 'color:white;' %>
-        </li>
-        <li>
+          <i class="fa fa-phone pull-right" style="color:white;" id="nav-icon"></i>
           <%= link_to 'Contact', '#contact', style: 'color:white;' %>
         </li>
         
       </ul>
     </br>
-
-    <div style="text-align:center; border-radius:2px;"><%= image_tag("avatar_thumb.jpg") %></div>
+  </br>
+</br>
+    <hr style="width:170px; margin-right:0px; border-color:#25b5f1;">
+    <p style="color:white; font-family: 'Orbitron', sans-serif;" class="pull-right">© 2016 Thomas Jung.</p>
   </div><!-- /.container-fluid -->
 </nav>
 <%= yield %>
